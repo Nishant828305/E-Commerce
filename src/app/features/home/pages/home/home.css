@@ -1,0 +1,21 @@
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f4f7fc;
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  padding: 15px 30px;
+  background: #2563eb;
+  border: none;
+  color: white;
+  border-radius: 10px;
+}

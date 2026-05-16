@@ -1,0 +1,100 @@
+<div class="orders">
+  <div class="header">
+    <div>
+      <h1>Manage Orders</h1>
+      <p>Track and manage customer orders</p>
+    </div>
+
+    <button>Create Order</button>
+  </div>
+
+  <div class="stats">
+    <div class="card">
+      <h3>Total Orders</h3>
+      <h2>1,245</h2>
+      <span>+12% this month</span>
+    </div>
+
+    <div class="card">
+      <h3>Pending Orders</h3>
+      <h2>58</h2>
+      <span class="pending-text">Needs attention</span>
+    </div>
+
+    <div class="card">
+      <h3>Delivered</h3>
+      <h2>1,120</h2>
+      <span class="success-text">Completed</span>
+    </div>
+
+    <div class="card">
+      <h3>Cancelled</h3>
+      <h2>67</h2>
+      <span class="cancel-text">Low issue rate</span>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <div class="table-top">
+      <input type="text" placeholder="Search orders..." />
+
+      <select>
+        <option>All Status</option>
+        <option>Pending</option>
+        <option>Delivered</option>
+        <option>Cancelled</option>
+      </select>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Customer</th>
+          <th>Date</th>
+          <th>Amount</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>#1001</td>
+          <td>Nishant Kumar</td>
+          <td>12 May 2026</td>
+          <td>₹85,000</td>
+          <td><span class="success">Delivered</span></td>
+          <td><button class="view-btn">View</button></td>
+        </tr>
+
+        <tr>
+          <td>#1002</td>
+          <td>Rahul Sharma</td>
+          <td>11 May 2026</td>
+          <td>₹45,000</td>
+          <td><span class="pending">Pending</span></td>
+          <td><button class="view-btn">View</button></td>
+        </tr>
+
+        <tr>
+          <td>#1003</td>
+          <td>Aman Verma</td>
+          <td>10 May 2026</td>
+          <td>₹1,20,000</td>
+          <td><span class="cancel">Cancelled</span></td>
+          <td><button class="view-btn">View</button></td>
+        </tr>
+
+        <tr>
+          <td>#1004</td>
+          <td>Priya Singh</td>
+          <td>09 May 2026</td>
+          <td>₹32,000</td>
+          <td><span class="success">Delivered</span></td>
+          <td><button class="view-btn">View</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
