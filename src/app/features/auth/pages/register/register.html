@@ -1,34 +1,90 @@
-<div class="auth-container">
-  <div class="auth-card">
-    <div class="left-side">
-      <h1>Join With Us</h1>
-      <p>Create your account and start managing everything in one secure place.</p>
+<!-- register.html -->
+
+<div class="register-page">
+  <div class="register-box">
+    <!-- LEFT -->
+    <div class="register-left">
+      <div class="overlay"></div>
+
+      <div class="left-content">
+        <span class="brand-tag"> PREMIUM SHOPPING </span>
+
+        <h1>
+          Create Your <br />
+          Account
+        </h1>
+
+        <p>
+          Join our premium ecommerce platform and explore luxury collections with secure shopping
+          experience.
+        </p>
+
+        <div class="features">
+          <div class="feature-card">
+            <h3>10K+</h3>
+            <span>Happy Customers</span>
+          </div>
+
+          <div class="feature-card">
+            <h3>100%</h3>
+            <span>Secure Payment</span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="right-side">
+    <!-- RIGHT -->
+    <div class="register-right">
       <form>
-        <h2>Create Account</h2>
+        <div class="top">
+          <h2>Create Account</h2>
 
-        <div class="input-group">
+          <p>Please enter your details</p>
+        </div>
+
+        <!-- NAME -->
+        <div class="input-box">
           <label>Full Name</label>
-          <input type="text" placeholder="Enter your full name" />
+
+          <input type="text" placeholder="John Doe" />
         </div>
 
-        <div class="input-group">
+        <!-- EMAIL -->
+        <div class="input-box">
           <label>Email Address</label>
-          <input type="email" placeholder="Enter your email" />
+
+          <input type="email" placeholder="example@gmail.com" />
         </div>
 
-        <div class="input-group">
+        <!-- PASSWORD -->
+        <div class="input-box">
           <label>Password</label>
+
           <input type="password" placeholder="Create password" />
         </div>
 
-        <button type="submit">Register</button>
+        <!-- CONFIRM -->
+        <div class="input-box">
+          <label>Confirm Password</label>
 
-        <p class="login-text">
+          <input type="password" placeholder="Confirm password" />
+        </div>
+
+        <!-- CHECKBOX -->
+        <div class="checkbox">
+          <input type="checkbox" />
+
+          <span> I agree to Terms & Conditions </span>
+        </div>
+
+        <!-- BUTTON -->
+        <button type="submit">Create Account</button>
+
+        <!-- LOGIN -->
+        <p class="bottom-text">
           Already have an account?
-          <a routerLink="/login">Login</a>
+
+          <a routerLink="/login"> Login </a>
         </p>
       </form>
     </div>

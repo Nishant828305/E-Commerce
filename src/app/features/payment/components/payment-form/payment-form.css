@@ -1,0 +1,17 @@
+.payment-box {
+  width: 300px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ddd;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}

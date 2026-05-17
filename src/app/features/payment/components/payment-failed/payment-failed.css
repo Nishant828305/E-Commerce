@@ -1,0 +1,9 @@
+.failed-box {
+  width: 350px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  background: #fff1f1;
+  border: 1px solid red;
+}

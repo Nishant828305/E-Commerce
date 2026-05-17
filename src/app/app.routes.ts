@@ -4,7 +4,7 @@ import { Home } from './features/home/pages/home/home';
 
 import { ProductList } from './features/products/pages/product-list/product-list';
 
-import { ProductDetails} from './features/products/pages/product-details/product-details';
+import { ProductDetails } from './features/products/pages/product-details/product-details';
 
 import { Cart } from './features/cart/pages/cart/cart';
 
@@ -20,9 +20,15 @@ import { Dashboard } from './features/admin/pages/dashboard/dashboard';
 
 import { ManageOrders } from './features/admin/pages/manage-orders/manage-orders';
 
+import { PaymentFormComponent } from './features/payment/components/payment-form/payment-form';
+
+import { PaymentSuccessComponent } from './features/payment/components/payment-success/payment-success';
+
+import { PaymentFailedComponent } from './features/payment/components/payment-failed/payment-failed';
 
 
 export const routes: Routes = [
+
   { path: '', component: Home },
 
   { path: 'products', component: ProductList },
@@ -31,15 +37,22 @@ export const routes: Routes = [
 
   { path: 'cart', component: Cart },
 
-  { path: 'login', component: Login},
+  { path: 'login', component: Login },
 
-  { path: 'register', component: Register},
+  { path: 'register', component: Register },
 
-  { path: 'checkout', component: Checkout},
+  { path: 'checkout', component: Checkout },
+
+  { path: 'payment', component: PaymentFormComponent },
+
+  { path: 'payment-success', component: PaymentSuccessComponent },
+
+  { path: 'payment-failed', component: PaymentFailedComponent },
 
   { path: 'orders', component: OrderHistory },
 
   { path: 'admin', component: Dashboard },
 
-  { path: 'Manage', component: ManageOrders}
+  { path: 'Manage', component: ManageOrders },
+
 ];

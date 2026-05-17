@@ -1,88 +1,148 @@
-<div class="min-h-screen bg-gray-100 p-6">
+<div class="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 py-10 px-4">
   <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
-    <!-- Shipping Form -->
-    <div class="lg:col-span-2 bg-white rounded-2xl shadow p-6">
-      <h2 class="text-3xl font-bold mb-6">Checkout</h2>
+    <!-- LEFT SIDE -->
+    <div class="lg:col-span-2 bg-white rounded-3xl shadow-xl p-8">
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <h1 class="text-4xl font-bold text-gray-800">Checkout</h1>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-        <input
-          type="text"
-          placeholder="Full Name"
-          [(ngModel)]="shipping.name"
-          class="border p-3 rounded-lg outline-none"
-        />
-
-        <input
-          type="email"
-          placeholder="Email"
-          [(ngModel)]="shipping.email"
-          class="border p-3 rounded-lg outline-none"
-        />
-
-        <input
-          type="text"
-          placeholder="Phone"
-          [(ngModel)]="shipping.phone"
-          class="border p-3 rounded-lg outline-none"
-        />
-
-        <input
-          type="text"
-          placeholder="City"
-          [(ngModel)]="shipping.city"
-          class="border p-3 rounded-lg outline-none"
-        />
-
-        <input
-          type="text"
-          placeholder="State"
-          [(ngModel)]="shipping.state"
-          class="border p-3 rounded-lg outline-none"
-        />
-
-        <input
-          type="text"
-          placeholder="Pincode"
-          [(ngModel)]="shipping.pincode"
-          class="border p-3 rounded-lg outline-none"
-        />
-      </div>
-
-      <textarea
-        placeholder="Full Address"
-        [(ngModel)]="shipping.address"
-        rows="4"
-        class="border p-3 rounded-lg outline-none w-full mt-5"
-      ></textarea>
-    </div>
-
-    <!-- Order Summary -->
-    <div class="bg-white rounded-2xl shadow p-6 h-fit">
-      <h2 class="text-2xl font-bold mb-5">Order Summary</h2>
-
-      <div *ngFor="let item of cartItems" class="flex items-center gap-4 mb-5 border-b pb-4">
-        <img [src]="item.image" class="w-20 h-20 object-cover rounded-lg" />
-
-        <div class="flex-1">
-          <h3 class="font-semibold">{{ item.title }}</h3>
-
-          <p class="text-gray-500">Quantity: {{ item.quantity }}</p>
+          <p class="text-gray-500 mt-1">Complete your shipping details</p>
         </div>
 
-        <p class="font-bold">₹{{ item.price * item.quantity }}</p>
+        <div class="bg-black text-white px-5 py-2 rounded-full text-sm">Secure Checkout</div>
       </div>
 
-      <div class="flex justify-between text-xl font-bold mt-6">
-        <span>Total</span>
-        <span>₹{{ getTotal() }}</span>
+      <!-- FORM -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="text-sm font-medium text-gray-600"> Full Name </label>
+
+          <input
+            type="text"
+            placeholder="Enter your name"
+            [(ngModel)]="shipping.name"
+            class="w-full mt-2 border border-gray-300 p-4 rounded-2xl outline-none focus:ring-2 focus:ring-black"
+          />
+        </div>
+
+        <div>
+          <label class="text-sm font-medium text-gray-600"> Email </label>
+
+          <input
+            type="email"
+            placeholder="Enter your email"
+            [(ngModel)]="shipping.email"
+            class="w-full mt-2 border border-gray-300 p-4 rounded-2xl outline-none focus:ring-2 focus:ring-black"
+          />
+        </div>
+
+        <div>
+          <label class="text-sm font-medium text-gray-600"> Phone </label>
+
+          <input
+            type="text"
+            placeholder="Phone number"
+            [(ngModel)]="shipping.phone"
+            class="w-full mt-2 border border-gray-300 p-4 rounded-2xl outline-none focus:ring-2 focus:ring-black"
+          />
+        </div>
+
+        <div>
+          <label class="text-sm font-medium text-gray-600"> City </label>
+
+          <input
+            type="text"
+            placeholder="Your city"
+            [(ngModel)]="shipping.city"
+            class="w-full mt-2 border border-gray-300 p-4 rounded-2xl outline-none focus:ring-2 focus:ring-black"
+          />
+        </div>
+
+        <div>
+          <label class="text-sm font-medium text-gray-600"> State </label>
+
+          <input
+            type="text"
+            placeholder="Your state"
+            [(ngModel)]="shipping.state"
+            class="w-full mt-2 border border-gray-300 p-4 rounded-2xl outline-none focus:ring-2 focus:ring-black"
+          />
+        </div>
+
+        <div>
+          <label class="text-sm font-medium text-gray-600"> Pincode </label>
+
+          <input
+            type="text"
+            placeholder="Pincode"
+            [(ngModel)]="shipping.pincode"
+            class="w-full mt-2 border border-gray-300 p-4 rounded-2xl outline-none focus:ring-2 focus:ring-black"
+          />
+        </div>
       </div>
 
+      <!-- ADDRESS -->
+      <div class="mt-6">
+        <label class="text-sm font-medium text-gray-600"> Full Address </label>
+
+        <textarea
+          rows="5"
+          placeholder="Enter your full address"
+          [(ngModel)]="shipping.address"
+          class="w-full mt-2 border border-gray-300 p-4 rounded-2xl outline-none focus:ring-2 focus:ring-black"
+        ></textarea>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="bg-white rounded-3xl shadow-xl p-8 h-fit sticky top-5">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">Order Summary</h2>
+
+      <!-- ITEMS -->
+      <div *ngFor="let item of cartItems" class="flex items-center gap-4 mb-6 border-b pb-5">
+        <img [src]="item.image" class="w-24 h-24 object-cover rounded-2xl shadow" />
+
+        <div class="flex-1">
+          <h3 class="font-semibold text-lg">
+            {{ item.title }}
+          </h3>
+
+          <p class="text-gray-500 text-sm mt-1">Quantity: {{ item.quantity }}</p>
+
+          <p class="font-bold text-xl mt-2">₹{{ item.price * item.quantity }}</p>
+        </div>
+      </div>
+
+      <!-- PRICE -->
+      <div class="space-y-4 mt-8">
+        <div class="flex justify-between text-gray-600">
+          <span>Subtotal</span>
+
+          <span>₹{{ getTotal() }}</span>
+        </div>
+
+        <div class="flex justify-between text-gray-600">
+          <span>Shipping</span>
+
+          <span class="text-green-600 font-medium"> Free </span>
+        </div>
+
+        <div class="border-t pt-4 flex justify-between text-2xl font-bold">
+          <span>Total</span>
+
+          <span>₹{{ getTotal() }}</span>
+        </div>
+      </div>
+
+      <!-- PAYMENT -->
       <button
         (click)="placeOrder()"
-        class="w-full bg-black text-white py-3 rounded-xl mt-6 hover:bg-gray-800 transition"
+        class="w-full mt-8 bg-black text-white py-4 rounded-2xl text-lg font-semibold hover:bg-gray-800 transition duration-300 shadow-lg"
       >
-        Place Order
+        Proceed To Payment
       </button>
+
+      <p class="text-center text-sm text-gray-500 mt-4">Secure payments powered by Razorpay</p>
     </div>
   </div>
 </div>
