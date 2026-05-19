@@ -22,7 +22,7 @@
   font-size: 32px;
   color: #222;
 }
-
+/* 
 .topbar button {
   padding: 12px 20px;
   border: none;
@@ -31,8 +31,21 @@
   border-radius: 8px;
   cursor: pointer;
   font-size: 14px;
+} */
+.actions{
+  display: flex;
+  gap: 10px;
 }
 
+.actions button{
+  padding: 12px 20px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
 .stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

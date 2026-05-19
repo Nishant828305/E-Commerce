@@ -9,12 +9,9 @@ import { PaymentFailedComponent } from './features/payment/components/payment-fa
 
 @Component({
   selector: 'app-root',
-
+  standalone:true,
   imports: [
     RouterOutlet,
-    PaymentFormComponent,
-    PaymentSuccessComponent,
-    PaymentFailedComponent
   ],
 
   templateUrl: './app.html',
